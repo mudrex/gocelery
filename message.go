@@ -258,5 +258,6 @@ func getReflectionResultMessage(val *reflect.Value) *ResultMessage {
 
 func releaseResultMessage(v *ResultMessage) {
 	v.reset()
-	resultMessagePool.Put(v)
+	// we dont want to publish result
+	// resultMessagePool.Put(v)
 }
